@@ -13,12 +13,22 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      backgroundColor: {
-        "sappagreen": "#65A6A0",
-      },
       colors: {
-        "sappagreen": "#65A6A0"
+        "tiffanyblue": "#7AD2CA",
+        "carribean-current": "#246A65",
+        "eggshell": "#F3EFE0",
       },
+      keyframes: {
+        shrink: {
+          '0%, 100%': { fontSize: '1rem' },
+        }
+      },
+      animation: {
+        'shrink': 'shrink 2s ease-in-out 1',
+      },
+      fontFamily: {
+        techFont: [ "techFont" ],
+      }
     },
   },
   plugins: [],
