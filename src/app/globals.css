@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+*,
+*:before,
+*:after {
+  @apply cursor-default;
+}
+
 @layer base {
     @font-face {
       font-family: 'techFont';
@@ -10,4 +16,16 @@
       font-display: swap;
       src: url("/ShareTechMono-Regular.ttf") format('truetype');
     }
+
+    @font-face {
+      font-family: 'tiltPrism';
+      font-style: normal;
+      font-weight: 400;
+      font-optical-sizing: auto;
+      font-variation-settings: 
+      "XROT" 0
+      "YROT" 0;
+      src: url("/TiltPrism-Regular-VariableFont_XROT,YROT.ttf") format('truetype');
+    }
+
   }

@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import AsymmetricCursor from "@/images/cursor.png";
 
 const config: Config = {
   content: [
@@ -28,8 +29,14 @@ const config: Config = {
       },
       fontFamily: {
         techFont: [ "techFont" ],
-      }
+        tiltPrism: [ "tiltPrism" ],
+      },
     },
+
+    cursor: {
+      default: "url(/asymmetric_cursor.png), default",
+      pointer: "url(/asymmetric_cursor.png), pointer",
+    }
   },
   plugins: [],
 };
