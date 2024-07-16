@@ -6,6 +6,12 @@
 *:before,
 *:after {
   @apply cursor-default;
+  @apply cursor-pointer;
+  @apply cursor-auto;
+  @apply cursor-wait;
+  @apply cursor-text;
+  @apply cursor-move;
+  @apply cursor-help;
 }
 
 @layer base {

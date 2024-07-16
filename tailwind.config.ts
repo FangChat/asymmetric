@@ -31,12 +31,16 @@ const config: Config = {
         techFont: [ "techFont" ],
         tiltPrism: [ "tiltPrism" ],
       },
+      cursor: {
+        default: "url(/asymmetric_cursor.png), default",
+        pointer: "url(/asymmetric_cursor.png), pointer",
+        auto: "url(/asymmetric_cursor.png), auto",
+        wait: "url(/asymmetric_cursor.png), wait",
+        text: "url(/asymmetric_cursor.png), text",
+        move: "url(/asymmetric_cursor.png), move",
+        help: "url(/asymmetric_cursor.png), help",
+      }
     },
-
-    cursor: {
-      default: "url(/asymmetric_cursor.png), default",
-      pointer: "url(/asymmetric_cursor.png), pointer",
-    }
   },
   plugins: [],
 };
