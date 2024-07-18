@@ -10,6 +10,7 @@ export default function RegisterPage(){
   const [ edition, setEdition ] = useState('');
   const [ themes, setThemes ] =  useState('');
   const [ teamLeader, setTeamLeader ] = useState('');
+  const [ phoneNumber, setPhoneNumber ] = useState('');
   const [ member1, setMember1 ] = useState('');
   const [ member2, setMember2 ] = useState('');
   const [ member3, setMember3 ] = useState('');
@@ -20,6 +21,10 @@ export default function RegisterPage(){
     if(!/\d/.test(event.target.value)){
       setTeamLeader(event.target.value);
     }
+  }
+
+  const handlePhoneNumber = (event: any) => {
+    setPhoneNumber(event.target.value.replace(/[^0-9]/g, ''));
   }
 
   const handleMember1 = (event: any) => {
@@ -69,6 +74,18 @@ export default function RegisterPage(){
 
         <form>
           <section className="flex flex-row gap-10 flex-wrap flex-shrink mt-16">
+
+          <Input
+            id="college"
+            name="college"
+            placeholder="Name of College"
+            className="w-96 h-14 bg-white rounded-3xl text-black"
+            disableUnderline={true}
+            required={true}
+            type="text"
+            inputProps={{ style: { textAlign: "center" } }}
+          ></Input>
+
           <Input
             id="email"
             name="email"
@@ -97,6 +114,19 @@ export default function RegisterPage(){
             id="teamleader"
             name="teamleader"
             placeholder="Name of Team Leader"
+            className="w-96 h-14 bg-white rounded-3xl text-black"
+            disableUnderline={true}
+            required={true}
+            type="text"
+            inputProps={{ style: { textAlign: "center" } }}
+          ></Input>
+
+          <Input
+            onChange={handlePhoneNumber}
+            value={phoneNumber}
+            id="leaderphone"
+            name="leaderphone"
+            placeholder="Team Leader Phone No"
             className="w-96 h-14 bg-white rounded-3xl text-black"
             disableUnderline={true}
             required={true}
@@ -208,7 +238,7 @@ export default function RegisterPage(){
           </FormControl>
           </section>
 
-          <Button type="submit" size="large" className="flex mt-10 w-48 h-14 text-white border-2 border-solid border-white bg-carribean-current mx-auto">Submit</Button>
+          <Button type="submit" size="large" className="flex mt-10 w-48 h-14 text-white border-2 border-solid border-white bg-carribean-current mx-auto hover:bg-green-500">Submit</Button>
           
 
         </form>
