@@ -19,11 +19,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
-  const openLink = (link: string) => {
-
-  }
-
   return (
     <html lang="en">
       <body>
@@ -39,7 +34,7 @@ export default function RootLayout({
 
           <section className="flex w-96 flex-row gap-2">
             <LinkButton alt="Instagram Logo" src={InstagramLogo} link="https://www.instagram.com/clubasymmetric.cit?igsh=MTYyZnZvaHoxNDRoYw=="/>
-            <LinkButton alt="LinkedIn Logo" src={LinkedInLogo} link="https://www.linkedin.com/company/cyberxtron-technologies/mycompany/"/>
+            <LinkButton alt="LinkedIn Logo" src={LinkedInLogo} link="https://www.linkedin.com/in/asymmetric-club-cit-403025305/"/>
             <LinkButton alt="X Logo" src={XLogo} link="https://x.com/asymmetricclub?t=G2P4XQw5zcwmAy6PZvVv6g&s=08"/>
             <LinkButton alt="Youtube Logo" src={YouTubeLogo} link="https://youtube.com/@asymmetriclubcit?si=QSBFnZ12wmGgeWv1"/>
             <LinkButton alt="Reddit Logo" src={RedditLogo} link="https://www.reddit.com/u/asymmetricclub/s/Ui5HBvqUua"/>
@@ -48,7 +43,7 @@ export default function RootLayout({
 
           <section className="flex w-96">
             <h1 className="font-bold font-tiltPrism text-5xl my-auto mx-auto">
-            "Asymmetric club massu da"
+            "ASYMMETRIC CLUB MASSU DA"
             </h1>
           </section>
 

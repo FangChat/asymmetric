@@ -1,5 +1,5 @@
 "use client";
-import { Input } from "@mui/material";
+import { Button, Input } from "@mui/material";
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
@@ -9,6 +9,48 @@ import { useState } from "react";
 export default function RegisterPage(){
   const [ edition, setEdition ] = useState('');
   const [ themes, setThemes ] =  useState('');
+  const [ teamLeader, setTeamLeader ] = useState('');
+  const [ member1, setMember1 ] = useState('');
+  const [ member2, setMember2 ] = useState('');
+  const [ member3, setMember3 ] = useState('');
+  const [ member4, setMember4 ] = useState('');
+  const [ member5, setMember5 ] = useState('');
+
+  const handleTeamLeader = (event: any) => {
+    if(!/\d/.test(event.target.value)){
+      setTeamLeader(event.target.value);
+    }
+  }
+
+  const handleMember1 = (event: any) => {
+    if(!/\d/.test(event.target.value)){
+      setMember1(event.target.value);
+    }
+  }
+
+  const handleMember2 = (event: any) => {
+    if(!/\d/.test(event.target.value)){
+      setMember2(event.target.value);
+    }
+  }
+
+  const handleMember3 = (event: any) => {
+    if(!/\d/.test(event.target.value)){
+      setMember3(event.target.value);
+    }
+  }
+
+  const handleMember4 = (event: any) => {
+    if(!/\d/.test(event.target.value)){
+      setMember4(event.target.value);
+    }
+  }
+
+  const handleMember5 = (event: any) => {
+    if(!/\d/.test(event.target.value)){
+      setMember5(event.target.value);
+    }
+  }
 
   const handleEdition = (event: SelectChangeEvent) => {
     setEdition(event.target.value);
@@ -25,8 +67,11 @@ export default function RegisterPage(){
           Synaptiq Hackathon Registration
         </h1>
 
-        <section className="flex flex-row gap-10 flex-wrap flex-shrink mt-16">
+        <form>
+          <section className="flex flex-row gap-10 flex-wrap flex-shrink mt-16">
           <Input
+            id="email"
+            name="email"
             placeholder="Email"
             className="w-96 h-14 bg-white rounded-3xl text-black"
             disableUnderline={true}
@@ -36,6 +81,8 @@ export default function RegisterPage(){
           ></Input>
 
           <Input
+            id="teamname"
+            name="teamname"
             placeholder="Team Name"
             className="w-96 h-14 bg-white rounded-3xl text-black"
             disableUnderline={true}
@@ -45,6 +92,10 @@ export default function RegisterPage(){
           ></Input>
 
           <Input
+            onChange={handleTeamLeader}
+            value={teamLeader}
+            id="teamleader"
+            name="teamleader"
             placeholder="Name of Team Leader"
             className="w-96 h-14 bg-white rounded-3xl text-black"
             disableUnderline={true}
@@ -54,6 +105,10 @@ export default function RegisterPage(){
           ></Input>
 
           <Input
+            onChange={handleMember1}
+            value={member1}
+            id="member1"
+            name="member1"
             placeholder="Team Member 1"
             className="w-96 h-14 bg-white rounded-3xl text-black"
             disableUnderline={true}
@@ -63,6 +118,10 @@ export default function RegisterPage(){
           ></Input>
 
           <Input
+            onChange={handleMember2}
+            value={member2}
+            id="member2"
+            name="member2"
             placeholder="Team Member 2"
             className="w-96 h-14 bg-white rounded-3xl text-black"
             disableUnderline={true}
@@ -72,6 +131,10 @@ export default function RegisterPage(){
           ></Input>
 
           <Input
+            onChange={handleMember3}
+            value={member3}
+            id="member3"
+            name="member3"
             placeholder="Team Member 3"
             className="w-96 h-14 bg-white rounded-3xl text-black"
             disableUnderline={true}
@@ -81,6 +144,10 @@ export default function RegisterPage(){
           ></Input>
 
           <Input
+            onChange={handleMember4}
+            value={member4}
+            id="member4"
+            name="member4"
             placeholder="Team Member 4"
             className="w-96 h-14 bg-white rounded-3xl text-black"
             disableUnderline={true}
@@ -90,6 +157,10 @@ export default function RegisterPage(){
           ></Input>
 
           <Input
+            onChange={handleMember5}
+            value={member5}
+            id="member5"
+            name="member5"
             placeholder="Team Member 5"
             className="w-96 h-14 bg-white rounded-3xl text-black"
             disableUnderline={true}
@@ -99,10 +170,12 @@ export default function RegisterPage(){
           ></Input>
 
           <FormControl className="bg-white rounded-3xl w-96 text-center" focused={false}>
+            <InputLabel className="w-full h-full mx-auto">Select Edition Interest</InputLabel>
             <Select
               placeholder="Edition Interest"
               labelId="editionSelector"
               id="editions"
+              name="editions"
               value={edition}
               onChange={handleEdition}
               autoWidth={true}
@@ -114,10 +187,12 @@ export default function RegisterPage(){
           </FormControl>
 
           <FormControl className="bg-white rounded-3xl w-96 text-center" focused={false} >
+            <InputLabel className="w-full h-full mx-auto">Select Themes Interest</InputLabel>
             <Select
               placeholder="Themes Interest"
               labelId="themesSelector"
               id="themes"
+              name="themes"
               value={themes}
               onChange={handleThemes}
               autoWidth={true}
@@ -131,8 +206,13 @@ export default function RegisterPage(){
 
             </Select>
           </FormControl>
+          </section>
 
-        </section>
+          <Button type="submit" size="large" className="flex mt-10 w-48 h-14 text-white border-2 border-solid border-white bg-carribean-current mx-auto">Submit</Button>
+          
+
+        </form>
+
       </main>
     );
 }
