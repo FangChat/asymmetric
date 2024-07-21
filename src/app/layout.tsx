@@ -24,7 +24,7 @@ export default function RootLayout({
       <body>
         <NavBar />
         {children}
-        <footer className="w-full flex h-40 bg-gradient-to-r to-carribean-current from-tiffanyblue flex-row justify-around">
+        <footer className="w-full flex h-40 bg-gradient-to-r to-carribean-current from-tiffanyblue flex-row justify-around" id="myfoot">
           
           <section className="flex flex-col w-96 cursor-asymmetric">
             <h1 className="text-5xl font-bold ml-4 mt-4">ASYMMETRIC</h1>

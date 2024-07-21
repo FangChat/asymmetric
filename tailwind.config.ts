@@ -18,14 +18,22 @@ const config: Config = {
         "tiffanyblue": "#7AD2CA",
         "carribean-current": "#246A65",
         "eggshell": "#F3EFE0",
+        "dullblack": "#0F0F0F",
+        "cream": "#F0F0F0",
       },
       keyframes: {
         shrink: {
           '0%, 100%': { fontSize: '1rem' },
-        }
+        },
+
+        fadein: {
+          '0%': { opacity: "0" },
+          '100%': { opacity: "1" },
+        },
       },
       animation: {
         'shrink': 'shrink 2s ease-in-out 1',
+        'fadein': 'fadein 5s ease-in-out 1',
       },
       fontFamily: {
         techFont: [ "techFont" ],

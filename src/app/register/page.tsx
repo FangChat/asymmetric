@@ -59,10 +59,18 @@ export default function RegisterPage(){
 
   const handleEdition = (event: SelectChangeEvent) => {
     setEdition(event.target.value);
+    const editionInputLabel = document.getElementById("editionInputLabel");
+    if(editionInputLabel != null){
+      editionInputLabel.style.visibility = "hidden";
+    }
   }
 
   const handleThemes = (event: SelectChangeEvent) => {
     setThemes(event.target.value);
+    const themeInputLabel = document.getElementById("themeInputLabel");
+    if(themeInputLabel != null){
+      themeInputLabel.style.visibility = "hidden";
+    }
   }
 
 
@@ -200,8 +208,9 @@ export default function RegisterPage(){
           ></Input>
 
           <FormControl className="bg-white rounded-3xl w-96 text-center" focused={false}>
-            <InputLabel className="w-full h-full mx-auto">Select Edition Interest</InputLabel>
+            <InputLabel className="w-full h-full mx-auto" id="editionInputLabel" focused={false}>Select Edition Interest</InputLabel>
             <Select
+              autoFocus = {false}
               placeholder="Edition Interest"
               labelId="editionSelector"
               id="editions"
@@ -216,9 +225,10 @@ export default function RegisterPage(){
             </Select>
           </FormControl>
 
-          <FormControl className="bg-white rounded-3xl w-96 text-center" focused={false} >
-            <InputLabel className="w-full h-full mx-auto">Select Themes Interest</InputLabel>
+          <FormControl className="bg-white rounded-3xl w-96 text-center" focused={false}>
+            <InputLabel className="w-full h-full mx-auto" id="themeInputLabel" focused={false}>Select Themes Interest</InputLabel>
             <Select
+              autoFocus = {false}
               placeholder="Themes Interest"
               labelId="themesSelector"
               id="themes"
@@ -237,10 +247,8 @@ export default function RegisterPage(){
             </Select>
           </FormControl>
           </section>
-
           <Button type="submit" size="large" className="flex mt-10 w-48 h-14 text-white border-2 border-solid border-white bg-carribean-current mx-auto hover:bg-green-500">Submit</Button>
           
-
         </form>
 
       </main>
